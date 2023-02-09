@@ -1,22 +1,30 @@
+<!DOCTYPE html>
 <html>
-<head>
-  <title>Chrome Dino</title>
-  <style>
-    body {
-      background: #ffffff;
-      color: #fff;
-      font-family: sans-serif;
-      font-size: 3em;
-      text-align: center;
-    }
+	<head>
+		<title>RAWRRRR!</title>
+		<link rel="stylesheet" href="style.css"> 
+	</head>
+	<body>
+		<!-- 
+			Boilerplate to start the basic layout. 
 
-    canvas {
-      width: 100%;
-    }
-  </style>
-</head>
-<body>
-  <canvas id="game" width="1000" height="400" />
-  <script src="js/dinoscript.js"></script>
-</body>
+			Making the canvas white will make our work space really obvious.
+		-->
+		<h1>Dinosaur Game!</h1>
+		<canvas id="game" height="200" width="800"></canvas>
+		<p class="controls">press space bar to start</p>
+
+        <script src="js/helpers.js"></script>
+        <script src="js/objects/game-object.js"></script>
+        <script src="js/objects/cactus.js"></script>
+        <script src="js/objects/dinosaur.js"></script>
+        <script src="js/objects/background.js"></script>
+        <script src="js/objects/score.js"></script>
+        <script src="js/game.js"></script>
+        <script>
+        	new Game({
+        		el: document.getElementById("game")
+        	});
+        </script>
+	</body>
 </html>
